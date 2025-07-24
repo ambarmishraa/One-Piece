@@ -16,7 +16,7 @@ const SignUp = () => {
                             </div>
                             <div className="flex justify-end w-[90%]">
                                 <button type="submit"
-                                    className="bg-white cursor-pointer w-[35%] hover:bg-blue-700 text-black font-semibold py-2 px-4 rounded">REGISTER
+                                    className="bg-white cursor-pointer w-[35%] hover:bg-red-600 text-black font-semibold py-2 px-4 rounded">REGISTER
                                 </button>
                             </div>
                             <div style={{ backgroundColor: 'transparent', position: 'absolute', bottom: '-1px', zIndex: -1 }}>

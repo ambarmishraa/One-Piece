@@ -16,3 +16,11 @@
     background-size: cover;        
     background-repeat: no-repeat;
 }
+
+.animeListing-wrapper{
+    background-image: url('./assets/admin/listing/listing.png');
+    background-size: cover;        
+    background-repeat: no-repeat;  
+    width: 100vw;
+    height: 100vh;
+}

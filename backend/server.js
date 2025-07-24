@@ -2,6 +2,7 @@ const express = require('express');
 const env = require('dotenv').config();
 const User = require('./model/userModel.js');
 const Admin = require('./model/adminModel.js');
+const AnimeListing = require('./model/adminModel.js')
 
 const app = express();
 app.use(express.json());
@@ -16,12 +17,13 @@ app.get('/', (req, res, next) => {
   res.send("This is Selection Screen");
 })
 
-// User Section
+// User Section Start Here
 app.get('/user', (req, res, next) => {
   console.log("Welcome User.....");
   res.send("Welcome User ....!")
 });
 
+// For creating a user with email and password
 app.post('/register-user', async (req, res, next) => {
   console.log("Post is working...");
   try {
@@ -33,12 +35,23 @@ app.post('/register-user', async (req, res, next) => {
   }
 });
 
-// Admin Section
+// For getting all the anime from DB
+app.get('/anime-listing', async (req, res, next) => {
+ try {
+  const animes = await AnimeListing.find({});
+  res.status(200).json(animes);
+ } catch (error) {
+  res.status(500).json({message: error.message});
+ }
+});
+
+// Admin Section Start Here
 app.get('/admin', (req, res, next) => {
   console.log("Welcome Admin.....");
   res.send("Welcome Admin ....!")
 })
 
+// For creating a user with email and password
 app.post('/register-admin', async (req, res, next) => {
   console.log("Post is working...");
   try{
@@ -46,6 +59,16 @@ app.post('/register-admin', async (req, res, next) => {
     res.status(200).json(admin)
   }
   catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
+// For listing the anime in DB
+app.post('/anime-listing', async (req, res, next) => {
+  try{
+    const animeListing = await AnimeListing.create(req.body);
+  res.status(200).json(animeListing);
+  } catch(error) {
     res.status(500).json({message: error.message})
   }
 })
