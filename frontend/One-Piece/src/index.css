@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Used in Authentication Pages */
+.auth-wrapper{
+    background-image: url('./assets/user/authentication/authentication.png');
+    background-size: cover;         /* Ensures the image covers the entire div */
+    background-repeat: no-repeat;   /* Prevents tiling */
+    width: 100vw;
+    height: 100vh;
+}
