@@ -4,7 +4,7 @@ const SignUp = () => {
             <div className="auth-wrapper flex items-center justify-center overflow-hidden relative">
                 <form action="" method="POST">
                     <div className="w-[500px] h-[500px] backdrop-blur-md bg-black/10 border border-white/50 rounded-xl p-6 shadow-lg flex font-bold justify-center">
-                        <div className=" w-[100%] h-[100%] ">
+                        <div className=" w-[100%] h-[100%]">
                             <div className="flex justify-center mb-4">
                                 <p className="text-white text-3xl">SIGNUP</p>
                             </div>
@@ -20,7 +20,7 @@ const SignUp = () => {
                                 </button>
                             </div>
                             <div style={{ backgroundColor: 'transparent', position: 'absolute', bottom: '-1px', zIndex: -1 }}>
-                                <img src="/itachi.png" style={{ width: '370px' }} alt="FormImage" />
+                                <img src="/authentication.png" style={{ width: '370px' }} alt="FormImage" />
                             </div>
                         </div>
                     </div>

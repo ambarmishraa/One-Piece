@@ -3,8 +3,16 @@
 /* Used in Authentication Pages */
 .auth-wrapper{
     background-image: url('./assets/user/authentication/authentication.png');
-    background-size: cover;         /* Ensures the image covers the entire div */
-    background-repeat: no-repeat;   /* Prevents tiling */
+    background-size: cover;        
+    background-repeat: no-repeat;  
     width: 100vw;
     height: 100vh;
+}
+
+.error-wrapper{
+    background-image: url('../public/error.png');
+     width: 100vw;
+    height: 100vh;
+    background-size: cover;        
+    background-repeat: no-repeat;
 }

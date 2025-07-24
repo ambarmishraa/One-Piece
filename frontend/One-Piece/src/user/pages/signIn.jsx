@@ -19,7 +19,7 @@ const SignIn = () => {
                                     className="bg-white w-[35%] cursor-pointer hover:bg-blue-700 text-black font-semibold py-2 px-4 rounded">LOGIN</button>
                             </div>
                             <div style={{ backgroundColor: 'transparent', position: 'absolute', bottom: '-1px',  zIndex: -1   }}>
-                                <img src="/itachi.png" style={{width:'370px'}} alt="FormImage" />
+                                <img src="/authentication.png" style={{width:'370px'}} alt="FormImage" />
                             </div>
                         </div>
                     </div>
