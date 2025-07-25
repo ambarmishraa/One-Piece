@@ -57,6 +57,30 @@ app.get('/anime-listing/:id', async (req, res, next) => {
   }
 })
 
+// For Updating the data in DB by Id
+app.put('/anime-listing/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const updateAnime = await AnimeListing.findByIdAndUpdate(id, req.body);
+    res.status(200).json(updateAnime);
+  }
+  catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+});
+
+// For Deleting the data from DB by Id
+app.delete('/anime-listing/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const deletedAnime = await AnimeListing.findByIdAndDelete(id);
+    res.status(200).json(deletedAnime);
+  }
+  catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+})
+
 // Admin Section Start Here
 app.get('/admin', (req, res, next) => {
   console.log("Welcome Admin.....");
